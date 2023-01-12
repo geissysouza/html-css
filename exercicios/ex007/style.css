@@ -1,0 +1,36 @@
+@charset "UFT-8";
+
+/*comentários dentro do css*/
+
+* /* <--- configurações globais */
+{ font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{ 
+    background-image: linear-gradient(to right, #65AFBF, #384028);
+}
+
+main {
+    background-color:#D9D8D7;
+    border-radius: 10px; /*Bordas arredondadas*/
+    box-shadow: /*SOMBRA*/ 5px 5px 15px #38402880; 
+    /*1º lado, 2º pra baixo, 3º espalhar*/
+    /*na cor configure a transparência e tom de cor*/
+    width: 600px; /*LARGURA*/
+    padding: 10px; /*afastamento das laterais*/
+    margin: auto; /*margem centralizada automática de acordo com o movimento da tela*/
+}
+
+h1{
+    color: #384028;
+    text-align: center; /*Titulo centralizado*/
+}
+
+h2{
+    color:#736F38
+
+}
+
+p{
+    text-align: justify;
+}

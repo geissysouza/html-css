@@ -1,0 +1,79 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4C557A;
+}
+
+.principal{
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+header{
+    background-color: #E47632;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav{
+    text-align: center;
+}
+
+nav>a{ /* ATENÇÃO COM OS FILHOS*/
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 15px;
+    
+}
+
+nav>a:hover{
+    text-decoration: underline;
+}
+main{
+    background-color: #31AFE0;
+    padding: 20px;
+    margin: 10px;
+    text-align: justify;
+    border-radius: 5px;
+
+}
+
+.paragrafo{
+    text-indent: 20px;
+}
+article{
+    background-color: #a9e2f8;
+    padding: 20px;
+    margin: 12px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);
+}
+
+aside{
+    color:#E47632;
+    margin: 0px;
+}
+footer{
+    background-color: black;
+    color:white;
+    text-align:center;
+    padding: 4px;
+    margin: 0px;
+
+}
