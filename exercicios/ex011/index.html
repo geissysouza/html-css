@@ -14,7 +14,7 @@
     table{
         width: 500px;
         border-collapse: collapse;
-        
+        position: relative;   
     }
 
     td,th{
@@ -22,13 +22,26 @@
         padding: 10px;
     }
 
-thead, tfoot{
+    thead, tfoot{
     background-color: gray;
     color: white;
-}
+    }
 
-.num{
+    thead{ /*efeito cabeçalho fixo, ao descer a barra de rolagem do navegador pra baixo o cabeçalho fica fixo auxiliando no professo de leitura e compreensão da tabela*/
+        position: sticky;
+        top: -1px;
+    }
+
+    .num{
     text-align: right;
+}
+    .centralizada{
+        text-align: center;
+    }
+
+tbody > tr:nth-child(2n) /*efeito zebrado.  ODD [impar] ou (2n-1) - EVEN [par] ou (2n)/*/
+{ 
+    background-color: lightgray;
 }
 
 </style>
@@ -44,17 +57,17 @@ thead, tfoot{
         TFOOT - Rodapé
              tr, td, th
     -->
-</body>
+
 <table>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>população</th>
+            <th scope="col">Estado</th> <!-- SCOPE:COL - Os dados estão na coluna-->
+            <th scope="col" style="width: 100px;">população</th> <!-- SCOPE:COL - Os dados estão na coluna-->
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>São Paulo</td>
+            <td >São Paulo</td>
             <td class="num">46 024 937</td>
         </tr>
         <tr>
@@ -73,14 +86,108 @@ thead, tfoot{
             <td>Paraná</td>
             <td class="num">11 835 379</td>
         </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">11 835 379</td>
+        </tr>
     </tbody>
     <tfoot>
         <tr>
-            <th>Total de habitantes</th>
+            <th scope="row">Total de habitantes</th> <!-- SCOPE:ROW - Os dados estão na linha-->
             <td class="num">0000</td>
         </tr>
     </tfoot>
 
 </table>
 
+<h1>Mesclagem de células</h1>
+
+<table class="centralizada">
+    <tr>
+        <td>A</td>
+        <td colspan="2">B</td> <!-- Mesclar LINHAS, mas tirei a célula 'C' para ficar organizado -->
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>E</td>
+        <td rowspan="2">F</td> <!-- Mesclar COLUNAS, mas tirei a célula 'I' para ficar organizado -->
+    </tr>
+    <tr>
+        <td>G</td>
+        <td>H</td>
+    
+    </tr>
+</table>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nihil dicta soluta, culpa omnis neque veritatis totam quisquam iusto et accusantium fuga enim facere adipisci rem labore pariatur architecto ducimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maiores quisquam officia accusantium ullam numquam cupiditate, sed mollitia repellat laborum repudiandae ipsam in impedit alias explicabo a reiciendis illo fugiat dolorum sit rerum ut cum laboriosam. Est corporis autem doloremque veritatis officia, placeat dolorum enim eveniet eum! Nisi eaque facilis vitae obcaecati ipsa! Sapiente nesciunt nam, beatae iure, eum, suscipit fugiat sequi incidunt possimus sint mollitia veritatis. Atque maiores rerum facere voluptates porro a, repudiandae illum dolore molestias. Qui laudantium deserunt iure ratione explicabo aliquam aspernatur impedit itaque quam dignissimos. Commodi iste repellat non, quam deserunt ipsa voluptate quae, quo maiores dolor excepturi harum cum magni amet sunt impedit mollitia natus consequatur expedita consectetur iure ea voluptas inventore nobis? Modi optio odit voluptatibus consequatur? At aspernatur corporis distinctio quod ut accusamus temporibus exercitationem nostrum nulla architecto. Modi velit dolorem ex mollitia iusto soluta corporis iste aut debitis cum? Aliquam ad mollitia eveniet non id necessitatibus vel? Amet nobis odio sit obcaecati facere, quis ea sint impedit rem incidunt. Provident, nostrum facere fugiat nihil quas consequuntur odio, voluptatum culpa quibusdam eum deserunt. Culpa molestias consectetur voluptate nisi. Adipisci expedita, earum commodi, assumenda, reiciendis veniam incidunt fugit qui est cumque quos.</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nihil dicta soluta, culpa omnis neque veritatis totam quisquam iusto et accusantium fuga enim facere adipisci rem labore pariatur architecto ducimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maiores quisquam officia accusantium ullam numquam cupiditate, sed mollitia repellat laborum repudiandae ipsam in impedit alias explicabo a reiciendis illo fugiat dolorum sit rerum ut cum laboriosam. Est corporis autem doloremque veritatis officia, placeat dolorum enim eveniet eum! Nisi eaque facilis vitae obcaecati ipsa! Sapiente nesciunt nam, beatae iure, eum, suscipit fugiat sequi incidunt possimus sint mollitia veritatis. Atque maiores rerum facere voluptates porro a, repudiandae illum dolore molestias. Qui laudantium deserunt iure ratione explicabo aliquam aspernatur impedit itaque quam dignissimos. Commodi iste repellat non, quam deserunt ipsa voluptate quae, quo maiores dolor excepturi harum cum magni amet sunt impedit mollitia natus consequatur expedita consectetur iure ea voluptas inventore nobis? Modi optio odit voluptatibus consequatur? At aspernatur corporis distinctio quod ut accusamus temporibus exercitationem nostrum nulla architecto. Modi velit dolorem ex mollitia iusto soluta corporis iste aut debitis cum? Aliquam ad mollitia eveniet non id necessitatibus vel? Amet nobis odio sit obcaecati facere, quis ea sint impedit rem incidunt. Provident, nostrum facere fugiat nihil quas consequuntur odio, voluptatum culpa quibusdam eum deserunt. Culpa molestias consectetur voluptate nisi. Adipisci expedita, earum commodi, assumenda, reiciendis veniam incidunt fugit qui est cumque quos.</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nihil dicta soluta, culpa omnis neque veritatis totam quisquam iusto et accusantium fuga enim facere adipisci rem labore pariatur architecto ducimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maiores quisquam officia accusantium ullam numquam cupiditate, sed mollitia repellat laborum repudiandae ipsam in impedit alias explicabo a reiciendis illo fugiat dolorum sit rerum ut cum laboriosam. Est corporis autem doloremque veritatis officia, placeat dolorum enim eveniet eum! Nisi eaque facilis vitae obcaecati ipsa! Sapiente nesciunt nam, beatae iure, eum, suscipit fugiat sequi incidunt possimus sint mollitia veritatis. Atque maiores rerum facere voluptates porro a, repudiandae illum dolore molestias. Qui laudantium deserunt iure ratione explicabo aliquam aspernatur impedit itaque quam dignissimos. Commodi iste repellat non, quam deserunt ipsa voluptate quae, quo maiores dolor excepturi harum cum magni amet sunt impedit mollitia natus consequatur expedita consectetur iure ea voluptas inventore nobis? Modi optio odit voluptatibus consequatur? At aspernatur corporis distinctio quod ut accusamus temporibus exercitationem nostrum nulla architecto. Modi velit dolorem ex mollitia iusto soluta corporis iste aut debitis cum? Aliquam ad mollitia eveniet non id necessitatibus vel? Amet nobis odio sit obcaecati facere, quis ea sint impedit rem incidunt. Provident, nostrum facere fugiat nihil quas consequuntur odio, voluptatum culpa quibusdam eum deserunt. Culpa molestias consectetur voluptate nisi. Adipisci expedita, earum commodi, assumenda, reiciendis veniam incidunt fugit qui est cumque quos.</p>
+</body>
 </html>
