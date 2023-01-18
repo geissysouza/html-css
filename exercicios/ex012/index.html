@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="post"> 
+<!--
+*Action é onde as informações do formulário vão ser enviadas - linguagem de programação
+*Por padrão os formulários usam o método GET, mas é necessário colocar o método POST (para Dados sensíveis, envio de fotos e arquivos) para melhor a segurança e os dados não ficarem visíveis (mas ainda ficam visíveis em inspensionar no navegador. Para não aparecer os dados é necessário trabalhar com criptografia, https.
+*O limite do GET é de até 3000 letras)
+-->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+<!--ANOTAÇÕES:
+*'nome' é mais importate para html e linguagem PHP; id é mais importante para JAVASCRIPT
+*o'id' pode ser qualquer nome inclusive o mesmo nome do 'nome'
+* nesse caso foi aplicado o 'i'antes para identificar melhor
+* Quando se usa o LABEL, o nome vai se identificar com a caixa de entrada. 
+-->
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
