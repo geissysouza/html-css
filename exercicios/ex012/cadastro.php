@@ -1,1 +1,1 @@
-<p>Formulário enviado com sucesso!</p>
+Formulário enviado com sucesso!
