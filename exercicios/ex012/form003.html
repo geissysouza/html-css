@@ -7,7 +7,7 @@
     <title>Formulário 03</title>
 </head>
 <body>
-    <h1>Formulário</h1>
+    <h1>Teste Formulário</h1>
     <form action="cadastro.php" method="post" autocomplete="on">
         <fieldset>
             <legend>Dados Pessoais</legend>
@@ -44,6 +44,25 @@
 <!--Você deve envelopar o nome e inserir o LABEL para expandir a area clicavel da marcação. Ao inves de selecionar só clicando no quadradinho, a palavra também selecionará o quadradinho '$-->
 
         </fieldset>
+
+        <fieldset>
+            <legend>Cor preferida</legend>
+            <p>
+                <label for="icor">Cor:</label>
+                <input type="color" name="cor" id="icor"> <!--VALUE: pode colocar uma cor escrita em valores-->
+
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Enviar Arquivo</legend>
+            <p>
+                <label for="ifoto">Foto do perfil</label>
+                <input type="file" name="Foto" id="ifoto"> <!-- Deve usar o metodo POST-->
+
+            </p>
+        </fieldset>
+
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
