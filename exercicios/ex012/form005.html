@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 05</title>
+</head>
+<body>
+    <h1>Testes com OUTPUT - Formulários</h1>
+    
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <h2> Cálculo de soma</h2>
+            <p>
+                <label for="in1">Número 1:</label>
+                <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+            <!-- ONINPUT é programação. faz realizar a soma no OUTPUT-->
+            </p>
+            <p>
+                <label for="in2">Número 2:</label>
+                <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+            </p>
+            <p>
+                <label for="isoma">Soma:</label>
+                <output name="soma" id="isoma">0</output>
+<!-- OUTPUT (mostrar valor) não é para calcular e envia valores, ele calcula e apenas mostra valores na tela - 
+INPUT (entrar  valor)-->
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <h2>Range</h2>
+            <p>
+                <label for="inumr">Número:</label>
+                <input type="range" name="numero" id="inumr" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inumr.value)">
+<!-- ONINPUT ="id output . innerHTML = Number (id input . value)"-->
+                <output id="ival">5</output>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <h2>Cálculo de Idade</h2>
+            <p>
+                <label for="iano">Em que ano você nasceu?</label>
+                <input type="number" name="ano" id="iano" min="1900" max="2022" required oninput="calcIdade()">
+<!-- ONINPUT ="id output . innerHTML = Number (id input . value)"-->
+               
+            </p>
+            <p>
+                <label for="iidade">Sua idade é:</label>
+                <output id="iidade">0</output>
+            </p>
+        </fieldset>
+    </form>
+
+<!-- JAVASCRIPT"-->
+<script>
+    function calcIdade(){
+        let atual = new Date().getFullYear()
+        iidade.innerHTML = Number(atual) - Number(iano.value)
+    }
+</script>
+
+</body>
+</html>
