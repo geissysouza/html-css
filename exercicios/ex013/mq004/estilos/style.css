@@ -56,7 +56,8 @@ nav>ul>li> a:hover{
 }
 
 main{
-    width: 90vw;
+    width: 90vw; /*configuração geral*/
+    max-width: 768px; /*uando a tela tiver 768px o main para de crescer*/
     background-color: white;
     margin: auto;
     padding: 10px;
